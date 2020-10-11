@@ -56,7 +56,9 @@
             to your other well-wishers. So, happy birthday!
           </p>
           <div class="button-group">
-            <a href="#" class="btn btn-common" data-toggle="modal" data-target="#exampleModalCenter">Click Me</a>
+            <button class="btn btn-common" data-toggle="modal" data-target="#exampleModalCenter" id="click" onclick="play()" disabled>Click Me</button>
+            <audio id="audio" src="./assets/audio/birthday.mp3"></audio>
+            <!-- <a href="#" class="btn btn-common" data-toggle="modal" data-target="#exampleModalCenter" id="click">Click Me</a> -->
           </div>
 
           <!-- Modal -->
@@ -66,16 +68,16 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title text-dark" id="exampleModalLongTitle">Birthday Wish</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="pause()">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  <img src="./assets/img/groot.jpg" alt="groot" height="100%" width="100%">
-                  <p class="text-dark">Best Wishes</p>
+                  <img src="./assets/img/raj.jpg" alt="groot" style="height: 18rem;">
+                  <p class="text-dark">Many many happy returns of the day</p>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary bg-danger" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-secondary bg-danger" data-dismiss="modal" onclick="pause()">Close</button>
                 </div>
               </div>
             </div>

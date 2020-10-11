@@ -22,7 +22,7 @@
     /* ==========================================================================
     countdown timer
     ========================================================================== */
-     jQuery('#clock').countdown('2020/11/23',function(event){
+     jQuery('#clock').countdown('2020/10/12',function(event){
       var $this=jQuery(this).html(event.strftime(''
       +'<div class="time-entry days"><span>%-D</span> Days</div> '
       +'<div class="time-entry hours"><span>%H</span> Hours</div> '
@@ -59,3 +59,30 @@
   });      
 
 }(jQuery));
+
+
+(function enableButton() {
+  var startDate = new Date();
+  var endDate = new Date("10/12/2020")
+  var timeDifference = Math.ceil(endDate.getTime() - startDate.getTime())
+  var x = document.getElementById("click");
+
+  var audio = document.getElementById("audio");
+  setTimeout(function () {
+    audio.play();
+    audio.loop = true;
+    x.removeAttribute("disabled");
+  }, 5000);
+})();
+
+
+function play() {
+  var audio = document.getElementById("audio");
+  audio.play();
+  audio.loop = true;
+}
+
+function pause() {
+  var audio = document.getElementById("audio");
+  audio.pause();
+}
