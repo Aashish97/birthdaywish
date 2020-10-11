@@ -69,10 +69,8 @@
 
   var audio = document.getElementById("audio");
   setTimeout(function () {
-    audio.play();
-    audio.loop = true;
     x.removeAttribute("disabled");
-  }, 5000);
+  }, timeDifference);
 })();
 
 
